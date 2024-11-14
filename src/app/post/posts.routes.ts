@@ -5,7 +5,7 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
 import { PostListComponent } from './post-list/post-list.component';
 import { PostService } from './services/post.service';
 
-const routes: Routes = [
+export default [
   {
     path: '',
     component: PostListComponent,
@@ -31,9 +31,3 @@ const routes: Routes = [
     ],
   },
 ];
-
-@NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
-})
-export class PostRoutingModule {}
