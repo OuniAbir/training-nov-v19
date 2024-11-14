@@ -3,7 +3,7 @@ import { inject, Injectable } from '@angular/core';
 import { Observable, of, tap } from 'rxjs';
 
 export type Post = {
-  id: number;
+  id?: number;
   title: string;
   content: string;
   author: number;

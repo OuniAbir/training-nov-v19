@@ -11,6 +11,7 @@ export type Address = {
 };
 
 export type Author = {
+  id?: number;
   name: string;
   photo: string;
   pseudo: string[];
@@ -22,6 +23,10 @@ export type Author = {
 })
 export class AuthorService {
   private http = inject(HttpClient);
+
+  public getAuthorList(): Observable<Author[]> {
+    return this.http.get<Author[]>(`/api/authors`);
+  }
 
   public getAuthorById(id: number): Observable<Author> {
     return this.http.get<Author>(`/api/authors/${id}`);
