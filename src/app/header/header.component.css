@@ -6,7 +6,8 @@
   height: 60px;
 }
 
-a {
+a,
+p {
   color: white;
   text-decoration: none;
 

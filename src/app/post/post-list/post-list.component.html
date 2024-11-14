@@ -11,7 +11,14 @@
   <tr>
     <td>{{ post.title }}</td>
     <td>
-      <button [routerLink]="['/posts', post.id]">Allez aux détails</button>
+      <button type="button" [routerLink]="['/posts', post.id]">
+        Allez aux détails
+      </button>
+    </td>
+    <td>
+      <button type="button" (click)="selectPost(post)">
+        Sélectionner le post {{ post.id }} / {{ post.author }}
+      </button>
     </td>
   </tr>
   }
