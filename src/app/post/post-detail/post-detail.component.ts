@@ -9,6 +9,6 @@ import { Post } from '../services/post.service';
   styleUrl: './post-detail.component.css',
 })
 export class PostDetailComponent {
-  @Input()
+  @Input({ required: true })
   protected post?: Post;
 }
