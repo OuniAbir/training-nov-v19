@@ -13,3 +13,4 @@ export * from './lib/pipes/filtered-list.pipe';
 export * from './lib/logger.service';
 export * from './lib/toaster/toaster.service';
 export * from './lib/toaster/toaster/toaster.component';
+export * from './lib/tpl-card/tpl-card.component';

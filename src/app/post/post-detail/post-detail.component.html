@@ -1,4 +1,5 @@
 @if (post(); as post) {
+  <lib-tpl-card>
 <h2>{{ post.title }}</h2>
 <img
   [ngSrc]="post.photo"
@@ -11,4 +12,5 @@ illustration"
 <p>
   {{ post.content }}
 </p>
+</lib-tpl-card>
 }

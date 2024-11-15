@@ -3,12 +3,13 @@ import { ActivatedRoute } from '@angular/router';
 import { map, switchMap } from 'rxjs';
 import { AuthorService } from '../services/author.service';
 import { AsyncPipe } from '@angular/common';
+import { TplCardComponent } from 'lib';
 
 @Component({
-    selector: 'app-author',
-    templateUrl: './author.component.html',
-    styleUrl: './author.component.css',
-    imports: [AsyncPipe],
+  selector: 'app-author',
+  templateUrl: './author.component.html',
+  styleUrl: './author.component.css',
+  imports: [AsyncPipe, TplCardComponent],
 })
 export class AuthorComponent {
   private authorService = inject(AuthorService);
