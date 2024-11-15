@@ -10,3 +10,4 @@ export * from './lib/custom-input/custom-input.component';
 export * from './lib/directives/bold-search-text.directive';
 export * from './lib/directives/click-outside.directive';
 export * from './lib/pipes/filtered-list.pipe';
+export * from './lib/logger.service';

@@ -7,6 +7,7 @@ import { AppComponent } from './app/app.component';
 import { provideRouter, withComponentInputBinding } from '@angular/router';
 import { routes } from './app/routes';
 import { provideExperimentalZonelessChangeDetection } from '@angular/core';
+import { provideLogger } from 'lib';
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -14,5 +15,6 @@ bootstrapApplication(AppComponent, {
     provideHttpClient(),
     provideRouter(routes, withComponentInputBinding()),
     provideExperimentalZonelessChangeDetection(),
+    provideLogger(),
   ],
 }).catch((err) => console.error(err));
