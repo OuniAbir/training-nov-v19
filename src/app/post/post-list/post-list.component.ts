@@ -2,13 +2,18 @@ import { Component, inject } from '@angular/core';
 import { Post, PostService } from '../services/post.service';
 import { RouterOutlet, RouterLink } from '@angular/router';
 import { AsyncPipe } from '@angular/common';
-import { LoggerLevel, LoggerService, provideLogger } from 'lib';
+import {
+  LoggerLevel,
+  LoggerService,
+  provideLogger,
+  TplCardListComponent,
+} from 'lib';
 
 @Component({
   selector: 'app-post-list',
   templateUrl: './post-list.component.html',
   styleUrl: './post-list.component.css',
-  imports: [RouterOutlet, RouterLink, AsyncPipe],
+  imports: [RouterOutlet, RouterLink, AsyncPipe, TplCardListComponent],
   providers: [provideLogger(LoggerLevel.DEBUG)],
 })
 export class PostListComponent {

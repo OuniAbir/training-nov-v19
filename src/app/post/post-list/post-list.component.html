@@ -3,24 +3,19 @@
   <router-outlet name="author" />
 </section>
 
-<h1>Liste des posts</h1>
-
 @if (posts$ | async; as posts) {
-<table>
-  @for (post of posts; track post) {
-  <tr>
+<lib-tpl-card-list [list]="posts">
+  <h1>Liste des posts</h1>
+  <ng-template #rowRef let-post>
     <td>{{ post.title }}</td>
     <td>
-      <button type="button" [routerLink]="['/posts', post.id]">
-        Allez aux détails
-      </button>
+      <button [routerLink]="['/posts', post.id]">Allez aux détails</button>
     </td>
     <td>
       <button type="button" (click)="selectPost(post)">
-        Sélectionner le post {{ post.id }} / {{ post.author }}
+        Selectionner le post
       </button>
     </td>
-  </tr>
-  }
-</table>
+  </ng-template>
+</lib-tpl-card-list>
 } @else { ... }

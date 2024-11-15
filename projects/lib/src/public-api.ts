@@ -14,3 +14,4 @@ export * from './lib/logger.service';
 export * from './lib/toaster/toaster.service';
 export * from './lib/toaster/toaster/toaster.component';
 export * from './lib/tpl-card/tpl-card.component';
+export * from './lib/tpl-card-list/tpl-card-list.component';

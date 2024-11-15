@@ -1,0 +1,15 @@
+<mat-card>
+  <ng-content select="h1">
+    <h1>Liste</h1>
+  </ng-content>
+  <table>
+    @if (rowTemplate(); as rowTpl) { @for (item of list(); track item) {
+    <tr>
+      <ng-template
+        [ngTemplateOutlet]="rowTpl"
+        [ngTemplateOutletContext]="{ $implicit: item }"
+      ></ng-template>
+    </tr>
+    } }
+  </table>
+</mat-card>
