@@ -4,11 +4,11 @@ export const provideLogger = (loggerLevel?: LoggerLevel): Provider[] => {
   return [
     {
       provide: LOGGER_LEVEL,
-      useFactory: () => loggerLevel??DEFAULT_LOGGER_LEVEL
+      useFactory: () => loggerLevel ?? DEFAULT_LOGGER_LEVEL,
     },
-    LoggerService
-  ]
-}
+    LoggerService,
+  ];
+};
 
 export enum LoggerLevel {
   INFO,
@@ -48,7 +48,7 @@ export class LoggerService {
       case LoggerLevel.ERROR:
         return console.error('%c' + msg, 'color: #DC143C');
       default:
-        console.log('debug : '+ msg);
+        console.log('debug : ' + msg);
     }
   }
 }

@@ -1,0 +1,7 @@
+<mat-card>
+    @if (data.text) {
+        <ng-container>{{data.text}}</ng-container>
+    } @else if (data.tpl) {
+        <ng-container *ngTemplateOutlet="data.tpl"></ng-container>
+    }
+</mat-card>
